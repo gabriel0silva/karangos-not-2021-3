@@ -32,22 +32,25 @@ function App() {
           }}>
 
             <AppHeader />
-            <Switch>
               <Box component='main' sx={{
-                margin: '20px 20px 60px 20px'
-              }}>
+                  margin: '20px 20px 60px 20px'
+                }}>
+                <Switch>
+                
 
-                <Route path="/clientes" exact>
-                  <ClientesList />
-                </Route>
+                  <Route path="/clientes" exact>
+                    <ClientesList />
+                  </Route>
 
-                <Route path="/clientes/new">
-                  <ClientesForm />
-                </Route>
+                  <Route path="/clientes/new">
+                    <ClientesForm />
+                  </Route>
 
-              </Box>
-
-            </Switch>
+                  <Route path="/clientes/:id">
+                    <ClientesForm />
+                  </Route>
+                </Switch>
+            </Box>
             <AppFooter />
           </Box>
         </ThemeProvider>
